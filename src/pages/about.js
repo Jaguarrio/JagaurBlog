@@ -99,7 +99,7 @@ export default function About() {
             <h2 className="text-4xl dark:text-white mb-2">Related Websites</h2>
             <p className="text-[19px] dark:text-gray-400 mb-6">เว็บไซต์ที่เกี่ยวข้อง</p>
             <section className="p-3 grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-5">
-               {websitesData.map(site => <RelatedSite site={site} />)}
+               {websitesData.map((site,index) => <RelatedSite key={index} site={site} />)}
             </section>
          </article>
       </>

@@ -8,6 +8,7 @@ import matter from "gray-matter"
 import _ from "lodash"
 
 export default function Index({ blogs }) {
+  
   const [tagSelected, setTagSelected] = useState("")
   const [blogsFilter, setBlogsFilter] = useState(blogs)
   const [search, setSearch] = useState({
