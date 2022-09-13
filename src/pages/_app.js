@@ -2,7 +2,6 @@ import '../../styles/globals.css'
 
 import NextNProgress from "nextjs-progressbar"
 
-import HeadComp from "../components/cores/HeadComp"
 import Navbar from "../components/cores/Navbar"
 import Footer from "../components/cores/Footer"
 
@@ -17,7 +16,6 @@ export default function MyApp({ Component, pageProps }) {
         showOnShallow={true}
         options={{ easing: "ease" }}
       />
-      <HeadComp />
       <Navbar />
       <Component {...pageProps} />
       <Footer />
