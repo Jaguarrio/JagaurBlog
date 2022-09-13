@@ -8,7 +8,7 @@ import matter from "gray-matter"
 import _ from "lodash"
 
 export default function Index({ blogs }) {
-  
+
   const [tagSelected, setTagSelected] = useState("")
   const [blogsFilter, setBlogsFilter] = useState(blogs)
   const [search, setSearch] = useState({
@@ -24,6 +24,7 @@ export default function Index({ blogs }) {
   }
 
   useEffect(() => {
+
     const result = blogs.filter(blog => {
       if (tagSelected) {
         if (blog.frontmatter.tags.some(tag => tagSelected === tag)
@@ -73,7 +74,7 @@ export default function Index({ blogs }) {
 
       <section className="grid xl:grid-cols-[3fr_1fr]">
         <article className="py-7  md:p-7 flex flex-wrap gap-5 max-w-full justify-center xl:justify-start">
-          {blogsFilter.map((blog, index) => <Blog key={index} {...blog} />)}
+          {_.sortBy(blogsFilter,blog => new Date(blog.frontmatter.date)).reverse().map((blog, index) => <Blog key={index} {...blog} />)}
         </article>
         <aside className="border-l-2 dark:border-gray-700 p-4 min-h-[500px] overflow-auto hidden xl:block">
           <header className="text-lg dark:text-white">Tags (แท็ก)</header>

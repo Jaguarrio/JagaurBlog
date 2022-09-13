@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function RelatedSite({ site }) {
    return (
@@ -9,7 +10,9 @@ export default function RelatedSite({ site }) {
          </header>
          <p className="dark:text-gray-400 text-[19px] min-h-[300px]">{site.description}</p>
          <div className="text-center">
-            <button className={`px-4 py-2 text-white rounded-md ${site.statusOpen ? "bg-blue-500" : "bg-gray-500"}`}>{site.statusOpen ? "เยี่ยมชมเว็บไซต์" : "ยังไม่เปิดใช้งาน"}</button>
+            <Link href={site.link}>
+               <a className={`px-4 py-2 text-white rounded-md ${site.statusOpen ? "bg-blue-500" : "bg-gray-500"}`}>{site.statusOpen ? "เยี่ยมชมเว็บไซต์" : "ยังไม่เปิดใช้งาน"}</a>
+            </Link>
          </div>
       </div>
    )

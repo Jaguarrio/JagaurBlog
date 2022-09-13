@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 import Contact from "../components/cores/Contact"
 
@@ -85,8 +86,10 @@ export default function About() {
                      <p className="dark:text-gray-400 text-md text-[19px]">เว็บไซต์นี้มีชื่อว่า Jaguar Blog สร้างเพื่อใช้ในการทำ Portfolio และการทำบทความแบ่งปันความรู้ในเรื่องต่างๆที่ผมนั้นพอที่จะรู้ทั้ง คอมพิวเตอร์ คณิตศาสตร์ วิทยาศาสตร์ ภาษาอังกฤษ Technologies และอื่นๆอีกมากมาย หลักการในการทำเว็บไซต์นี้ก็คือใช้งานง่าย เข้าถึงได้ ผมจะเน้นไปที่เรื่องการเข้าถึงที่ง่ายและไม่มีอะไรซับซ้อนโดยจะสังเกตได้จากหน้าหลักและเกี่ยวกับซึ่งมีอยู่แค่ 2 หน้า เพื่อประโยชน์แก่ผู้อื่นที่เข้ามาเยี่ยมชมไม่มากก็น้อย ขอขอบคุณทุกท่านนะครับ ^^</p>
                   </div>
                   <div className="px-2">
-                     <button className="bg-orange-400 border-2 border-orange-400  mx-4 px-6 py-2 text-white rounded-md">อ่านบทความ</button>
-                     <button className="border-2 border-blue-500 mx-4 px-6 py-2 text-blue-500 hover:bg-blue-500 hover:text-white duration-200 rounded-md">ติดต่อ</button>
+                     <Link href="/">
+                     <a className="bg-orange-400 border-2 border-orange-400  mx-4 px-6 py-2 text-white rounded-md">อ่านบทความ</a>
+                     </Link>
+                     <a href="tel:0949797766" className="border-2 border-blue-500 mx-4 px-6 py-2 text-blue-500 hover:bg-blue-500 hover:text-white duration-200 rounded-md">ติดต่อ (เบอร์โทรศัพท์)</a>
                   </div>
                </div>
                <img src="/images/others/logo.svg" alt="" className="max-w-[700px] mx-auto order-1 xl:order-none relative" />

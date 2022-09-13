@@ -14,7 +14,7 @@ export default function Footer() {
             <Link href="#">
                <a className="text-md dark:text-white cursor-pointer text-[18px]">JAGUAR<span className="text-orange-400 text-[15px]">Project</span></a>
             </Link>
-            <Link href="#">
+            <Link href="https://jjhomeproperty.com">
                <a className="text-md dark:text-white cursor-pointer text-[18px]">JJHome<span className="text-[#339dff] text-[15px]">Property</span></a>
             </Link>
          </div>
