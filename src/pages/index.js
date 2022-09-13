@@ -22,7 +22,7 @@ export default function Index({ blogs }) {
 
   function onSubmit(e) {
     e.preventDefault()
-    
+
     const result = _.filter(blogs, blog => {
       if (tagSelected) {
         if (blog.frontmatter.tags.some(tag => tagSelected === tag)
