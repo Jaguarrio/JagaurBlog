@@ -7,10 +7,10 @@ export default function DarkMode() {
    const [toggleDarkMode, setToggleDarkMode] = useState(false)
 
    useEffect(() => {
-      localStorage.setItem("darkMode", JSON.stringify({ dark: toggleDarkMode }))
+      localStorage.setItem("theme", toggleDarkMode ? "dark" : "light")
 
-      const darkModeValue = localStorage.getItem("darkMode")
-      if (JSON.parse(darkModeValue)?.dark) {
+      const darkModeValue = localStorage.getItem("theme")
+      if (darkModeValue === "dark") {
          document.body.parentNode.setAttribute("class", "dark")
          document.body.setAttribute("class", "bg-slate-900")
       } else {
