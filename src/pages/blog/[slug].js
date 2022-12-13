@@ -24,7 +24,7 @@ export default function blogPage({ frontmatter, content, blogList }) {
                   {_.sortBy(blogList, blog => new Date(blog.frontmatter.date)).reverse().map(blog => (
                      <li key={blog.slug} className={`duration-100`}>
                         <Link href={`/blog/${blog.slug}`}>
-                           <a onClick={() => setOpenMenu(false)} className={`block w-full ${asPath.includes(blog.slug) ? "text-orange-400" : "hover:text-orange-400"}`}>-{blog.frontmatter.title}</a>
+                           <a onClick={() => setOpenMenu(false)} className={`block w-full truncate ${asPath.includes(blog.slug) ? "text-orange-400" : "hover:text-orange-400"}`}>-{blog.frontmatter.title}</a>
                         </Link>
                      </li>
                   ))}
@@ -36,7 +36,7 @@ export default function blogPage({ frontmatter, content, blogList }) {
 
          <section className="h-full w-full lg:w-[70%] xl:w-[50%] p-8">
             <h1 className="text-4xl mb-1 dark:text-white">{frontmatter.title}<span className="text-2xl text-gray-400"> ({frontmatter.category})</span></h1>
-            <div className="text-lg mb-8 dark:text-white">เนื้อหาเมื่อวันที่ <time>{new Date(frontmatter.date).toLocaleString("th", { dateStyle: "long" })}</time></div>
+            {/* <div className="text-lg mb-8 dark:text-white">เนื้อหาเมื่อวันที่ <time>{new Date(frontmatter.date).toLocaleString("th", { dateStyle: "long" })}</time></div> */}
             <div className="markdown prose dark:prose-invert min-w-full text-[17px]" dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
             <div className="flex justify-between items-center pt-5 border-t-2 dark:border-gray-700">
                <article className="flex justify-between items-center  gap-5">
